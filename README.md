@@ -8,13 +8,13 @@ As a big fan of Richard Dean Anderson, I built a pygame app, with which we can h
 
 Download and install [python 3.8](https://www.python.org/downloads/release/python-380/)
 
-Get the source code with this cmd command line
+Get the source code with this cmd command line.
 
 ```
 git pull --allow-unrelated-histories https://github.com/Adoupro/OC_DEVPYTHON_P3.git master
 ```
 
-Get the following python package with this cmd command line
+Get the following python package with this cmd command line.
 
 ```
 pip install pygame
@@ -22,7 +22,7 @@ pip install pygame
 
 ## Usage
 
-Run this cmd command line to execute the game
+Run this cmd command line to execute the game.
 
 ```
 python game.py
