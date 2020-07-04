@@ -14,25 +14,25 @@ class MacGiver:
 
     def moveRight(self, limit):
         #Make a move to the right
-        if (self.x-self.velocity, self.y) not in limit:
+        if (self.x - self.velocity, self.y) not in limit:
             self.x -= self.velocity
             return self.x
 
     def moveLeft(self, limit):
         #Make a move to the left
-        if (self.x+self.velocity, self.y) not in limit:
+        if (self.x + self.velocity, self.y) not in limit:
             self.x += self.velocity
             return self.x
 
     def moveUp(self, limit):
         #Make a move to the top
-        if (self.x, self.y-self.velocity) not in limit:
+        if (self.x, self.y - self.velocity) not in limit:
             self.y -= self.velocity
             return self.y
 
     def moveDown(self, limit):
         #Make a move to the bottom
-        if (self.x, self.y+self.velocity) not in limit:
+        if (self.x, self.y + self.velocity) not in limit:
             self.y += self.velocity
             return self.y
 
@@ -65,27 +65,27 @@ class Delimiter:
             for y, line in enumerate(file):
 
                 # Y emplacement computation
-                if y==0:
+                if y == 0:
                     y += 1
                 else:
-                    y = y*velocity+1
+                    y = y * velocity + 1
 
                 for x, value in enumerate(line[:-1]):
 
                     # X emplacement computation
-                    if x==0:
+                    if x == 0:
                         x += 1
                     else:
-                        x = x*velocity+1
+                        x = x * velocity + 1
 
                     # Get the forbidden and allowed emplacements
-                    if value=='s':
+                    if value == 's':
                         self.start = (x, y)
-                    elif value=='e':
+                    elif value == 'e':
                         self.exit = (x, y)
-                    elif value=='w' and (x, y):
+                    elif value == 'w' and (x, y):
                         self.limit.append((x, y))
-                    elif value!='w' and (x, y):
+                    elif value != 'w' and (x, y):
                         self.allowed.append((x, y))
 
 

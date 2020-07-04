@@ -57,13 +57,13 @@ while run:
         macGyver.moveDown(limit)
 
     # Item management
-    if (macGyver.x, macGyver.y)==items.needlePosition and items.pop['needle']==True:
+    if (macGyver.x, macGyver.y) == items.needlePosition and items.pop['needle']==True:
         items.pop['needle'] = False
         count += 1
-    if (macGyver.x, macGyver.y)==items.tubePosition and items.pop['tube']==True:
+    if (macGyver.x, macGyver.y) == items.tubePosition and items.pop['tube']==True:
         items.pop['tube'] = False
         count += 1
-    if (macGyver.x, macGyver.y)==items.etherPosition and items.pop['ether']==True:
+    if (macGyver.x, macGyver.y) == items.etherPosition and items.pop['ether']==True:
         items.pop['ether'] = False
         count += 1
 
@@ -81,7 +81,7 @@ while run:
         win.blit(items.etherImage, items.etherPosition)
 
     # Game result management
-    if (macGyver.x, macGyver.y)==guardian.position:
+    if (macGyver.x, macGyver.y) == guardian.position:
         font = pygame.font.SysFont('Comic Sans MS', 30)
         if True in items.pop.values():
             text = font.render(guardian.lose(), False, (255, 255, 255))
